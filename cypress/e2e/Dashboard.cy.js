@@ -9,6 +9,7 @@ describe("Dashboard", () => {
     const lg = new Login();
     const ds = new dashboard();
     lg.setUsername("Admin");
+    // classtype
     lg.setPassword("admin123");
     lg.clickLogin();
     ds.verifyPage();
@@ -32,14 +33,14 @@ describe("Dashboard", () => {
     ds.verifyMaintainancebtn_isVisible();
     ds.verifyBuzzbtn_isVisible();
   });
-  it.only("Open My info",()=>{
+  it.only("Open My info", () => {
     const lg = new Login();
     const ds = new dashboard();
     lg.setUsername("Admin");
-    lg.setPassword("admin123")
+    lg.setPassword("admin123");
     lg.clickLogin();
     ds.verifyPage();
     ds.click_Myinfo();
     ds.scrollto_Check();
-  })
+  });
 });
